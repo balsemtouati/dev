@@ -115,10 +115,11 @@ jobs:
           -H "Content-Type: application/json" \
           -d '{"title":"DAST Test"}')
         
-        if echo "$RESPONSE" | grep -q "created successfully"; then
+        if echo "$RESPONSE" | grep -q "\"id\""; then
           echo "✅ POST request: Item created"
         else
           echo "❌ POST request failed"
+          echo "Response: $RESPONSE"
           exit 1
         fi
         
