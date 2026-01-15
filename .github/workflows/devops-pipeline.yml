@@ -169,7 +169,7 @@ jobs:
         echo "Image: ${{ env.DOCKER_REPO }}:latest"
         echo "SHA: ${{ env.DOCKER_REPO }}:${{ env.SHORT_SHA }}"
 
-  # ========== JOB 4 : KUBERNETES DEPLOYMENT (BONUS) ==========
+  # ========== JOB 4 : KUBERNETES DEPLOYMENT ==========
   kubernetes-deploy:
     name: Deploy to Kubernetes
     runs-on: ubuntu-latest
